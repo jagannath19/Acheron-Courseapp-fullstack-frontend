@@ -1,0 +1,117 @@
+.tile {
+  border: 5px;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid grey;
+  transition: .3s;
+  background-color: lightgray;
+}
+.tile:hover {
+  border: 1px solid transparent;
+  margin-top: -2;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: rgb(187, 187, 95);
+}
+.grid-view {
+  margin-top: 30px;
+  margin-left: 10px;
+  /* margin-bottom: 50px; */
+}
+
+.add {
+  float: right;
+  margin-top: 18px;
+  margin-right: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #97a332;
+  color: #fff;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.add:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #5a01a7;
+  transition: 0.7s;
+}
+
+.add:hover {
+  background-color: #a912ea;
+  transition: 0.7s;
+  transform: translateY(-2px);
+}
+.add:active {
+  background-color: #0e9009;
+  transform: translateY(2px);
+}
+
+.list-btn {
+  width: 45px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.list-btn:hover {
+  transform: scale(1.2);
+}
+
+.tileImage {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  background: #9faa3c;
+  align-items: center;
+  justify-content: center;
+}
+h4 {
+  margin: 0px;
+  width: 80%;
+  text-align: left;
+}
+.tileDetails {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+::ng-deep .mat-grid-tile-content {
+  flex-direction: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .mat-h4, .mat-subheading-1, .mat-typography h4 {
+    /* font: 900 5px/10px ; */
+
+}
+*{
+  overflow: hidden;
+}
+.tileDetails{
+  height: 50%;
+  width: 100%;
+  background: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column ;
+}
+.mat-card {
+  padding: 0;
+}
+}
+

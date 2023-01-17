@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@media only screen and (max-width: 390px) {
+  app-root body {
+    width: 94vw;
+  }
+  app-course-grid app-dashboard .dashboard .mat-toolbar mat-toolbar-single-row {
+    padding: 0px !important;
+  }
+}

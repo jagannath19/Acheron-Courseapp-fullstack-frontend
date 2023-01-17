@@ -1,0 +1,68 @@
+.addform {
+  border: 5px;
+  margin-top: 55px;
+  margin-left: 450px;
+  margin-right: 400px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+  .form {
+    text-align: center;
+    display: block !important;
+  }
+
+
+.submmit {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  background-color: #9aa818;
+  color: #fff;
+  padding: 15px;
+  min-height: 30px;
+  min-width: 120px;
+  
+}
+
+.submmit:focus {
+  outline-color: transparent;
+  outline-style: solid;
+  box-shadow: 0 0 0 4px #5a01a7;
+  transition: 0.7s;
+}
+
+.submmit:hover {
+  background-color: #7373df;
+  transition: 0.7s;
+  transform: translateY(-2px);
+}
+.submmit:active {
+  background-color: #0e9009;
+  transform: translateY(2px);
+
+}
+
+.validation{
+  font-size: smaller;
+  color: red;
+}
+.example-card{
+  padding-left: 140px;
+  padding-right: 200px;
+}
+
+.mat-form-field{
+  width: 400px !important;
+  
+}
+
+@media only screen and (max-width:600px){
+
+  .mat-card {
+    display: list-item;
+  }
+}
+
+
+
+

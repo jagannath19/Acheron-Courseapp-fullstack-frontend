@@ -1,0 +1,34 @@
+
+<div class="dashboard">
+<mat-toolbar>
+  <a class="logo" routerLink="/">
+    <img src="/assets/images/acheron-logo.png" alt="logo" />
+  </a>
+  <span>NEXT-U</span>
+  <span class="spacer"></span>
+  <span>Dashboard</span>
+  <span class="spacer"></span>
+  
+  <span>{{ userName }}</span>
+  <button mat-icon-button aria-label="user profile">
+    <mat-icon class="icon"> account_box </mat-icon>
+  </button>
+  
+  <button class="logout-button" mat-button color="primary" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<button
+  mat-raised-button
+  [routerLink]="['/course-list']"
+  class="course"
+>
+  COURSES
+</button>
+<div class="back-div"><button class="back-btn" (click)="goBack()"><mat-icon> reply </mat-icon></button></div>
+
+<router-outlet></router-outlet>
+</div>
+
+

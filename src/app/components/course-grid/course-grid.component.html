@@ -1,0 +1,69 @@
+<app-dashboard></app-dashboard>
+<button
+  class="list-btn"
+  matTooltip="Change view"
+  [routerLink]="['/course-list']"
+>
+  <mat-icon> view_module </mat-icon>
+</button>
+
+<span class="addCourse"></span>
+<button
+  *ngIf="role === 'MANAGER'"
+  mat-raised-button
+  [routerLink]="['/add-course']"
+  class="add"
+>
+  Add Course
+</button>
+
+
+<div class="grid-view">
+  <mat-card class="example-card" style="width: 97%">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div
+          fxFlex="25"
+          fxFlex.sm="33"
+          fxFlex.xs="50"
+          *ngFor="let course of courses"
+        >
+          <mat-grid-list cols="1" rowHeight="1:1" class="grid-list">
+            <mat-grid-tile
+              class="tile"
+              [routerLink]="['/course-details', course.objectID]"
+              routerLinkActive="router-link-active"
+            >
+              <div class="tileImage">
+                <img
+                  src="https://www.pngarts.com/files/7/Education-Course-Transparent-Image.png"
+                  width="100px"
+                  height="100px"
+                  alt=""
+                />
+
+                
+              </div>
+              <div class="tileDetails">
+                <h4><b>ID</b> : {{ course.objectID }}</h4>
+                <h4><b>Name</b> : {{ course.courseName }}</h4>
+
+                <h4><b>Faculty Name</b> : {{ course.facultyName }}</h4>
+                <h4><b>Price</b> : {{ course.price }}</h4>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-paginator
+    [length]="length"
+    [pageSize]="records"
+    [pageSizeOptions]="[1, 2, 3, 4, 5, 10, 25, 100]"
+    (page)="onPageChange($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</div>

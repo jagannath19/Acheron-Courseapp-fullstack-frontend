@@ -1,0 +1,103 @@
+<app-dashboard></app-dashboard>
+
+<div class="dlt-div">
+  <button
+    class="delete-btn"
+    (click)="deleteRow(course.objectID)"
+    *ngIf="role === 'MANAGER'"
+  >
+    <mat-icon> delete_outline </mat-icon>
+  </button>
+</div>
+<div class="dlt-div">
+  <button
+    class="delete-btn"
+    *ngIf="role != 'MEMBER'"
+    (click)="edit(course.objectID)"
+  >
+    <mat-icon>edit</mat-icon>
+  </button>
+</div>
+<br />
+
+<div class="details-table">
+  <table id="details" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <th>Columns</th>
+      <th>Values</th>
+    </tr>
+
+    <tr>
+      <td><b>Course Name</b></td>
+      <td>{{ course.courseName }}</td>
+    </tr>
+    <tr>
+      <td><b>Category</b></td>
+      <td>{{ course.category }}</td>
+    </tr>
+    <tr>
+      <td><b>Subcategory</b></td>
+      <td>{{ course.subcategory }}</td>
+    </tr>
+    <tr>
+      <td><b>Topics</b></td>
+      <td>{{ course.topics }}</td>
+    </tr>
+    <tr>
+      <td><b>Faculty Name</b></td>
+      <td>{{ course.facultyName }}</td>
+    </tr>
+    <tr>
+      <td><b>Duration</b></td>
+      <td>{{ course.durationInDays }}</td>
+    </tr>
+    <tr>
+      <td><b>Total Hours</b></td>
+      <td>{{ course.totalHour }}</td>
+    </tr>
+    <tr>
+      <td><b>Status</b></td>
+      <td>{{ course.status }}</td>
+    </tr>
+    <tr>
+      <td><b>Start Date</b></td>
+      <td>{{ course.startDate }}</td>
+    </tr>
+    <tr>
+      <td><b>End Date</b></td>
+      <td>{{ course.endDate }}</td>
+    </tr>
+    <tr>
+      <td><b>Languages</b></td>
+      <td>{{ course.languages }}</td>
+    </tr>
+    <tr>
+      <td><b>Subtitles</b></td>
+      <td>{{ course.subtitles }}</td>
+    </tr>
+    <tr>
+      <td><b>Features</b></td>
+      <td>{{ course.features }}</td>
+    </tr>
+    <tr>
+      <td><b>Price</b></td>
+      <td>{{ course.price | currency : "INR" }}</td>
+    </tr>
+    <tr>
+      <td><b>Rating</b></td>
+      <td>{{ course.rating }}</td>
+    </tr>
+    <tr>
+      <td><b>Level</b></td>
+      <td>{{ course.level }}</td>
+    </tr>
+    <tr>
+      <td><b>Mode</b></td>
+      <td>{{ course.mode }}</td>
+    </tr>
+    <tr>
+      <td><b>ID</b></td>
+      <td>{{ course.objectID }}</td>
+    </tr>
+  </table>
+</div>

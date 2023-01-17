@@ -1,0 +1,10 @@
+{
+    "/course-api-all":{
+        "target":"http://localhost:9000",
+        "secure":false
+    },
+    "/course-service":{
+        "target":"http://localhost:9000",
+        "secure":false
+    }
+}
